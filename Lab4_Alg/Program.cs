@@ -6,7 +6,7 @@ namespace Lab4_Alg
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Hello World!"); //jbjbjbjb
         }
     }
 }
