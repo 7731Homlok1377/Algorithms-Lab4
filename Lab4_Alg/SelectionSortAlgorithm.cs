@@ -60,6 +60,7 @@ namespace Lab4_Alg
                     {
                         return false;
                     }
+                    return true;
                 }
             }
             else
@@ -76,6 +77,7 @@ namespace Lab4_Alg
                     {
                         return false;
                     }
+                    return false;
                 }
 
             }
