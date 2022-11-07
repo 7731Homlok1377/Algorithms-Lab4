@@ -29,7 +29,7 @@ namespace Lab4_Alg
             PrintList(words);
         }
 
-        
+        //выводим все слова на экран //чисто проверить
         static void PrintList(List<string> words)
         {
             
@@ -40,7 +40,7 @@ namespace Lab4_Alg
 
         
         
-
+        //сравниваем какое слово стоит раньше
         private static bool WordAlignment(string word1, string word2)
         {
             
@@ -50,8 +50,8 @@ namespace Lab4_Alg
             {
                 for (int i = 0; i < word1.Length; i++)
                 {
-                    w1 = FindLetter(word1[i]);
-                    w2 = FindLetter(word2[i]);
+                    w1 = FindLetter(Char.ToLower(word1[i]));
+                    w2 = FindLetter(Char.ToLower(word2[i]));
                     if (w1 < w2)
                     {
                         return true;
@@ -66,8 +66,8 @@ namespace Lab4_Alg
             {
                 for (int i = 0; i < word2.Length; i++)
                 {
-                    w1 = FindLetter(word1[i]);
-                    w2 = FindLetter(word2[i]);
+                    w1 = FindLetter(Char.ToLower(word1[i]));
+                    w2 = FindLetter(Char.ToLower(word2[i]));
                     if (w1 < w2)
                     {
                         return true;
@@ -83,7 +83,8 @@ namespace Lab4_Alg
 
         }
 
-        private static int FindLetter(char c) {
+        //получаем индекс символа и по нему сравниваем какая буква стоит раньше в алфавите
+        private static int FindLetter(char c) { 
 
             int num = 0;
 

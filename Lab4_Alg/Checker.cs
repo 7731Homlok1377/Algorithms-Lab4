@@ -28,6 +28,7 @@ namespace Lab4_Alg
             
         }
 
+        //получаем сам список слов
         public static void GetWordsList(string line) {
 
             string[] data = line.Split(" ");
@@ -40,12 +41,12 @@ namespace Lab4_Alg
             foreach (string word in data) {
 
                 string result = "";
-
+                
                 for (int i = 0; i < word.Length; i++)
                 {
                     for (int j = 0; j < 25; j++)
                     {
-                        if (word[i] == Alphabe[j])
+                        if (Char.ToLower(word[i]) == Alphabe[j])
                         {
                             result = result + word[i];
                         }

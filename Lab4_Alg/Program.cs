@@ -6,7 +6,7 @@ namespace Lab4_Alg
     {
         static void Main(string[] args)
         {
-            string str = "gfhfh aaad jfjkdjv, hhh,";
+            string str = "gfhfh aaAAAd jfjkdjv, hHh, AAAaa";
             Checker.GetWordsList(str);
         }
     }
