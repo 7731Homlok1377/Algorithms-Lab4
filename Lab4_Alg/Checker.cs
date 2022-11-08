@@ -25,7 +25,7 @@ namespace Lab4_Alg
         }
 
         //получаем сам список слов
-        public static void GetWordsList(string line) {
+        public static List<string> GetWordsList(string line) {
 
             string[] data = line.Split(" ");
 
@@ -54,8 +54,8 @@ namespace Lab4_Alg
                 list.Add(result);
                
             }
-
-            SelectionSortAlgorithm.Sort(list);
+            return list;
+            //SelectionSortAlgorithm.Sort(list);
         }
 
         //получаем индекс символа и по нему сравниваем какая буква стоит раньше в алфавите

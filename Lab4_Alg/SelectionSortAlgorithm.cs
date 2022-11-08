@@ -9,8 +9,9 @@ namespace Lab4_Alg
 {
     internal class SelectionSortAlgorithm
     {
-        public static void Sort(List<string> words)
+        public static void Sort(string line)
         {
+            List<string> words = Checker.GetWordsList(line);
             int count = words.Count;
 
 
@@ -29,14 +30,14 @@ namespace Lab4_Alg
             Checker.CountWords(words);
         }
 
-        //выводим все слова на экран //чисто проверить
-        static void PrintList(List<string> words)
-        {
+        ////выводим все слова на экран //чисто проверить
+        //static void PrintList(List<string> words)
+        //{
             
-            for (int i = 0; i < words.Count; ++i)
-            Console.Write(words[i] + " ");
-            Console.WriteLine();
-        }
+        //    for (int i = 0; i < words.Count; ++i)
+        //    Console.Write(words[i] + " ");
+        //    Console.WriteLine();
+        //}
 
         
         

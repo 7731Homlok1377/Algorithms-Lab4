@@ -7,8 +7,8 @@ namespace Lab4_Alg
     {
         static void Main(string[] args)
         {
-            //string str = "gfhfh aaAAAd jfjkdjv, hHh, AAAaa hhhk aa aa bb bb bbc";
-            //Checker.GetWordsList(str);
+            string str = "gfhfh aaAAAd jfjkdjv, hHh, AAAaa hhhk aa aa bb bb bbc";
+            //SelectionSortAlgorithm.Sort(str);
             //int[] arr = new int[100];
 
             //Random rd = new Random();
@@ -16,24 +16,28 @@ namespace Lab4_Alg
             //{
             //    arr[i] = rd.Next(0, 100);
             //}
-            string[] str = { "ba", "ac", "DA", "cd", "ba" };
-            System.Console.WriteLine("The array before sorting:");
-            foreach (string x in str)
-            {
-                System.Console.Write(x + " ");
-            }
-            
+            //string[] str = { "ba", "ac", "DA", "cd", "bf" };
+            //System.Console.WriteLine("The array before sorting:");
+            //foreach (string x in str)
+            //{
+            //    System.Console.Write(x + " ");
+            //}
+
             //RadixSort.Sorting(str, 10, 2);
-            RadixSort.sorting(str, 10, 2);
+            RadixSort.Sorting(str, 10, 2);
             System.Console.WriteLine("\n\nThe array after sorting:");
             //foreach (double x in arr)
             //{
             //    System.Console.Write(x + " ");
             //}
-            foreach (string x in str)
-            {
-                System.Console.Write(x + " ");
-            }
+            //foreach (string x in str)
+            //{
+            //    System.Console.Write(x + " ");
+            //}
+            //foreach (var item in str)
+            //{
+            //    Console.WriteLine(item);
+            //}
             //List<string> t = new List<string>();
             //t.Add("a");
             //t.Add("b");

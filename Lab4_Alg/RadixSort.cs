@@ -11,13 +11,13 @@ namespace Lab4_Alg
     internal class RadixSort
     {
         
-        static int[] ConvertToInt(string[] words)
+        static int[] ConvertToInt(List<string> words)
         {
 
             string word = "";
 
-            int[] result = new int[words.Length];
-            for (int i = 0; i < words.Length; i++)
+            int[] result = new int[words.Count];
+            for (int i = 0; i < words.Count; i++)
             {
                 word = "";
                 foreach (var item in words[i])
@@ -31,9 +31,9 @@ namespace Lab4_Alg
         }
         
 
-        public static void sorting(string[] words, int range, int length)
+        public static void Sorting(string line, int range, int length)
         {
-
+            List<string> words = Checker.GetWordsList(line);
             int[] arr = ConvertToInt(words);
             ArrayList[] arlist = new ArrayList[range]; //попробовать for создать экземпляры
             for (int i = 0; i < range; i++)
@@ -75,6 +75,9 @@ namespace Lab4_Alg
                 
                     
             }
+            Checker.CountWords(words);
         }
+        
+        
     }
 }
