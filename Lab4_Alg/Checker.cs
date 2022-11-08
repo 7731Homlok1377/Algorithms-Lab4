@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -15,17 +16,12 @@ namespace Lab4_Alg
         {
 
             string text;
-
-            using (StreamWriter sw = new StreamWriter("text.txt", false))
-            {
-                sw.Write(data);
-            }
-
+                        
             using (StreamReader sr = new StreamReader("text.txt"))
             {
                 text = sr.ReadLine();
             }
-            
+            GetWordsList(text);
         }
 
         //получаем сам список слов
@@ -62,7 +58,39 @@ namespace Lab4_Alg
             SelectionSortAlgorithm.Sort(list);
         }
 
+        //получаем индекс символа и по нему сравниваем какая буква стоит раньше в алфавите
+        public static int FindLetter(char c)
+        {
+
+            int num = 0;
+
+            for (int i = 0; i < 25; i++)
+            {
+                if (c == Checker.Alphabe[i])
+                {
+                    num = i;
+                }
+            }
+            return num;
+        }
+
         
-        
+        public static void CountWords(List<string> words) {
+
+            IEnumerable<string> enumerable = words as IEnumerable<string>;
+            var stringGroups = enumerable.GroupBy(s => s);
+            foreach (var stringGroup in stringGroups)
+                Console.WriteLine("{0}  {1}", stringGroup.Key, stringGroup.Count());
+            //List<CountWords> list = new List<CountWords>();
+            //for (int i = 0; i < words.Count; i++)
+            //{
+            //    if (list[i].Word  == words[i])
+            //    {
+            //        list[i].Count++;
+            //    }
+
+            //}
+
+        }
     }
 }
