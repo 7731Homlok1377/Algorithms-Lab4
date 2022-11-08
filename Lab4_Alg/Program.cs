@@ -7,25 +7,26 @@ namespace Lab4_Alg
     {
         static void Main(string[] args)
         {
-            string str = "gfhfh aaAAAd jfjkdjv, hHh, AAAaa hhhk aa aa bb bb bbc";
-            //SelectionSortAlgorithm.Sort(str);
-            //int[] arr = new int[100];
+            //string str = "gfhfh aaAAAd jfjkdjv, hHh, AAAaa hhhk aa aa bb bb bbc";
+            //SelectionSortAlgorithm.Sort(Checker.WorkingFile());
+            ////int[] arr = new int[100];
 
-            //Random rd = new Random();
-            //for (int i = 0; i < arr.Length; ++i)
-            //{
-            //    arr[i] = rd.Next(0, 100);
-            //}
-            //string[] str = { "ba", "ac", "DA", "cd", "bf" };
-            //System.Console.WriteLine("The array before sorting:");
-            //foreach (string x in str)
-            //{
-            //    System.Console.Write(x + " ");
-            //}
+            ////Random rd = new Random();
+            ////for (int i = 0; i < arr.Length; ++i)
+            ////{
+            ////    arr[i] = rd.Next(0, 100);
+            ////}
+            ////string[] str = { "ba", "ac", "DA", "cd", "bf" };
+            ////System.Console.WriteLine("The array before sorting:");
+            ////foreach (string x in str)
+            ////{
+            ////    System.Console.Write(x + " ");
+            ////}
 
-            //RadixSort.Sorting(str, 10, 2);
-            RadixSort.Sorting(str, 10, 2);
-            System.Console.WriteLine("\n\nThe array after sorting:");
+            ////RadixSort.Sorting(str, 10, 2);
+            RadixSort.Sorting(Checker.WorkingFile(), 10, 2);
+            //string file = Checker.WorkingFile(); ////*** file
+            //System.Console.WriteLine("\n\nThe array after sorting:");
             //foreach (double x in arr)
             //{
             //    System.Console.Write(x + " ");

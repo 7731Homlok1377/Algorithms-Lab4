@@ -12,20 +12,23 @@ namespace Lab4_Alg
     {
         public static string Alphabe = "abcdefghijklmnopqrstuvwxyz";
 
-        public static void WorkingFile(string data)
+        public static string WorkingFile()
         {
 
             string text;
-                        
+
+
             using (StreamReader sr = new StreamReader("text.txt"))
             {
                 text = sr.ReadLine();
             }
-            GetWordsList(text);
+
+            return text;
         }
 
         //получаем сам список слов
         public static List<string> GetWordsList(string line) {
+
 
             string[] data = line.Split(" ");
 
