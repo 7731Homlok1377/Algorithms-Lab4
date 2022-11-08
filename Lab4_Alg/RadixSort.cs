@@ -10,35 +10,7 @@ namespace Lab4_Alg
     //Поразрядная сортировка
     internal class RadixSort
     {
-        //public static void Sorting(string[] words, int range, int length)
-        //{
-        //    int[] numWords = ConvertToInt(words);
-        //    ArrayList[] lists = new ArrayList[range];
-        //    for (int i = 0; i < range; ++i)
-        //        lists[i] = new ArrayList();
-
-        //    for (int step = 0; step < length; ++step)
-        //    {
-        //        //распределение по спискам
-        //        for (int i = 0; i < words.Length; ++i)
-        //        {
-        //            int temp = (numWords[i] % (int)Math.Pow(range, step + 1)) /
-        //                                          (int)Math.Pow(range, step);
-        //            lists[temp].Add(numWords[i]);
-        //        }
-        //        //сборка
-        //        int k = 0;
-        //        for (int i = 0; i < range; ++i)
-        //        {
-        //            for (int j = 0; j < lists[i].Count; ++j)
-        //            {
-        //                numWords[k++] = (int)lists[i][j];
-        //            }
-        //        }
-        //        for (int i = 0; i < range; ++i)
-        //            lists[i].Clear();
-        //    }
-
+        
         static int[] ConvertToInt(string[] words)
         {
 
@@ -57,10 +29,11 @@ namespace Lab4_Alg
             }
             return result;
         }
-        //}
+        
 
         public static void sorting(string[] words, int range, int length)
         {
+
             int[] arr = ConvertToInt(words);
             ArrayList[] arlist = new ArrayList[range]; //попробовать for создать экземпляры
             for (int i = 0; i < range; i++)
@@ -89,12 +62,17 @@ namespace Lab4_Alg
                 {
                     for (int j = 0; j < lists[i].Count; ++j)
                     {
-                        arr[k++] = (int)lists[i][j];
-                        words[k++] = arlist[i][j].ToString();
+                        arr[k] = (int)lists[i][j];
+                        words[k] = arlist[i][j].ToString();
+                        k++;
                     }
                 }
                 for (int i = 0; i < range; ++i)
+                {
                     lists[i].Clear();
+                    arlist[i].Clear();
+                }
+                
                     
             }
         }
